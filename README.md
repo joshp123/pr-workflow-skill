@@ -12,17 +12,9 @@ A skill for high-signal PR and commit workflows in agentic AI coding. Works with
 
 ## Installation
 
-Clone to your agent's skills directory or your project:
+Give this to your coding agent:
 
-```bash
-# Global install (adjust path for your agent)
-git clone https://github.com/joshp123/pr-workflow-skill.git ~/skills/pr-workflow-skill
-
-# Or add to a project
-git clone https://github.com/joshp123/pr-workflow-skill.git ./skills/pr-workflow-skill
-```
-
-Then reference it in your project's `AGENTS.md` or your agent's global config.
+> Install the PR workflow skill from https://github.com/joshp123/pr-workflow-skill — clone it to wherever I keep skills, and wire it up so it activates when I create commits or PRs.
 
 ## Usage
 
