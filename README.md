@@ -85,4 +85,4 @@ _(truncated for this example — real PRs include full verbatim prompts)_
 
 ## License
 
-MIT
+AGPL-3.0
