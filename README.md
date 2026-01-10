@@ -63,6 +63,8 @@ Terminal: iTerm.app 3.6.6
 System: macOS 26.1
 
 #### Prompts
+_(truncated for this example — real PRs include full verbatim prompts)_
+
 | ISO-8601 | Prompt |
 | --- | --- |
 | 2026-01-10T20:05:12Z | ``i need you to use cass/cm and search for all instructions related to creating PRs in the last 2 months or so...`` |
