@@ -34,33 +34,48 @@ The skill activates when creating commits or PRs. It will:
 3. **Collect environment metadata** using `scripts/build_pr_body.sh`
 4. **Include full prompt history** in table format
 
-## Template structure
+## Example PR
 
 ```markdown
 # Human written summary:
 The intent of this change is, as written by a human:
-> [your verbatim text here]
+> I want to add rate limiting to the API so we don't get hammered by bots.
+> Should be configurable per-endpoint.
 
-_The rest of this PR was written by <MODEL>-<THINKING_LEVEL>, running in the <HARNESS> harness._
+_The rest of this PR was written by claude-opus-4-5-high, running in the claude harness. Full environment + prompt history appear at the end._
 
 # Changes
-- [what changed]
+- Add `RateLimiter` middleware with per-endpoint config
+- Add `rate_limits.yaml` for endpoint-specific limits
+- Wire up middleware in `server.go`
+- Add tests for rate limiting behavior
 
 # Tests
-- [command + result]
+- `go test ./...` — ok (47 passed)
+- `curl -X POST localhost:8080/api/submit` x100 — 429 after 10 requests ✓
 
 # Risks
-- [bullet or "None: <reason>"]
+- None: additive change, existing endpoints unaffected until configured
 
 # Follow-ups
-- [bullet or "None"]
+- Add Redis backend for distributed rate limiting
+- Dashboard for monitoring rate limit hits
 
 # Prompt History
+
 ## Environment
-...
+Harness: claude
+Model: claude-opus-4-5
+Thinking level: high
+Terminal: ghostty 1.0.0
+System: macOS 15.2
+
 ## Prompts
 | ISO-8601 | Prompt |
 | --- | --- |
+| 2025-01-10T14:23:11Z | ``add rate limiting to the api, configurable per endpoint`` |
+| 2025-01-10T14:31:45Z | ``use a yaml config file for the limits, not hardcoded`` |
+| 2025-01-10T14:35:02Z | ``add tests`` |
 ```
 
 ## Files
