@@ -35,6 +35,6 @@ MSG
 ## Multi-Model Attribution
 If multiple models contributed, add Co-Authored-By trailers:
 ```
-Co-Authored-By: Claude Opus 4.5 <noreply@anthropic.com>
 Co-Authored-By: GPT-5.2-Codex <noreply@openai.com>
+Co-Authored-By: Gemini Pro <noreply@google.com>
 ```

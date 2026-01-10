@@ -24,7 +24,7 @@
 
 ## Prompt History Requirements
 - Include ISO-8601 timestamps with timezone.
-- Prefer `cm`/`cass` (Claude history search tools); if unavailable, fall back to agent logs and note the fallback.
+- Prefer agent history search tools (`cm`/`cass`, Codex logs, etc.); if unavailable, fall back to manual logs and note the fallback.
 - Include the full prompt history verbatim; do not omit prompts.
 - If a prompt contains sensitive info, redact only the sensitive portion and keep the entry.
 - Always include Environment metadata under Prompt History:

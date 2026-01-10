@@ -1,6 +1,6 @@
 # pr-workflow-skill
 
-A Claude Code skill for high-signal PR and commit workflows in agentic AI coding.
+A skill for high-signal PR and commit workflows in agentic AI coding. Works with your coding agent of choice.
 
 ## What it does
 
@@ -12,18 +12,17 @@ A Claude Code skill for high-signal PR and commit workflows in agentic AI coding
 
 ## Installation
 
-### Claude Code (global skill)
+Clone to your agent's skills directory or your project:
 
 ```bash
-# Clone to your skills directory
-git clone https://github.com/joshp123/pr-workflow-skill.git ~/.claude/skills/pr-workflow-skill
+# Global install (adjust path for your agent)
+git clone https://github.com/joshp123/pr-workflow-skill.git ~/skills/pr-workflow-skill
+
+# Or add to a project
+git clone https://github.com/joshp123/pr-workflow-skill.git ./skills/pr-workflow-skill
 ```
 
-Then reference it in your `~/.claude/CLAUDE.md` or project's `AGENTS.md`.
-
-### Manual
-
-Copy the contents to your project's `skills/` directory.
+Then reference it in your project's `AGENTS.md` or your agent's global config.
 
 ## Usage
 
@@ -42,7 +41,7 @@ The intent of this change is, as written by a human:
 > I want to add rate limiting to the API so we don't get hammered by bots.
 > Should be configurable per-endpoint.
 
-_The rest of this PR was written by claude-opus-4-5-high, running in the claude harness. Full environment + prompt history appear at the end._
+_The rest of this PR was written by gpt-5.2-codex-high, running in the codex harness. Full environment + prompt history appear at the end._
 
 # Changes
 - Add `RateLimiter` middleware with per-endpoint config
@@ -64,8 +63,8 @@ _The rest of this PR was written by claude-opus-4-5-high, running in the claude 
 # Prompt History
 
 ## Environment
-Harness: claude
-Model: claude-opus-4-5
+Harness: codex
+Model: gpt-5.2-codex
 Thinking level: high
 Terminal: ghostty 1.0.0
 System: macOS 15.2
